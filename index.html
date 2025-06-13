@@ -1,7 +1,406 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anima Nivsarkar | PhD Candidate</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #fafafa;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: #fff;
+            border-bottom: 3px solid #2c3e50;
+            padding: 2rem 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .name-title {
+            flex: 1;
+        }
+
+        .name-title h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+            font-weight: 400;
+        }
+
+        .title {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .contact-info {
+            text-align: right;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        .contact-info a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            background: #34495e;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        nav ul li {
+            margin: 0 2rem;
+        }
+
+        nav ul li a {
+            color: #ecf0f1;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 300;
+            padding: 0.5rem 0;
+            border-bottom: 2px solid transparent;
+            transition: border-color 0.3s ease;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+            border-bottom-color: #3498db;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .section {
+            margin-bottom: 4rem;
+            background: #fff;
+            padding: 2.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            font-size: 2rem;
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ecf0f1;
+            padding-bottom: 0.5rem;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 1.5rem;
+        }
+
+        .research-item {
+            padding: 1.5rem;
+            border: 1px solid #ecf0f1;
+            border-radius: 6px;
+            background: #f8f9fa;
+        }
+
+        .research-item h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .publication {
+            margin-bottom: 1.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid #ecf0f1;
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+        }
+
+        .publication-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+
+        .publication-authors {
+            font-style: italic;
+            color: #555;
+            margin-bottom: 0.3rem;
+        }
+
+        .publication-venue {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+        }
+
+        .cv-section {
+            margin-bottom: 2rem;
+        }
+
+        .cv-section h3 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+
+        .cv-item {
+            margin-bottom: 1rem;
+        }
+
+        .cv-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.3rem;
+        }
+
+        .cv-title {
+            font-weight: bold;
+            color: #2c3e50;
+        }
+
+        .cv-date {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .cv-institution {
+            color: #555;
+            margin-bottom: 0.3rem;
+        }
+
+        .cv-description {
+            color: #666;
+            line-height: 1.5;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .contact-info {
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            .name-title h1 {
+                font-size: 2rem;
+            }
+
+            nav ul li {
+                margin: 0 1rem;
+            }
+
+            .section {
+                padding: 1.5rem;
+            }
+
+            .cv-item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="name-title">
+                    <h1>Anima Nivsarkar</h1>
+                    <p class="title">PhD Candidate</p>
+                </div>
+                <div class="contact-info">
+                    <p>Email: <a href="mailto:anima@university.edu">anima@university.edu</a></p>
+                    <p>Office: Research Building 123</p>
+                    <p><a href="https://orcid.org/">ORCID</a> | <a href="https://scholar.google.com/">Google Scholar</a></p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#about" class="active">About</a></li>
+                <li><a href="#research">Research</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="container">
+            <section id="about" class="section">
+                <h2>About</h2>
+                <div class="intro">
+                    <p>Welcome to my academic website. I am a PhD candidate in [Your Field] at [University Name], working under the supervision of [Advisor Name]. My research focuses on [brief description of your research area].</p>
+                    
+                    <p>Prior to beginning my doctoral studies, I completed my [previous degree] in [field] from [institution]. My academic interests span [research interests], with particular emphasis on [specific focus areas].</p>
+                    
+                    <p>I am passionate about [what drives your research] and committed to advancing our understanding of [your field]. My work has implications for [broader impact of your research].</p>
+                </div>
+            </section>
+
+            <section id="research" class="section">
+                <h2>Research</h2>
+                <div class="research-grid">
+                    <div class="research-item">
+                        <h3>Current Research</h3>
+                        <p>My dissertation research investigates [dissertation topic]. This work addresses [problem statement] through [methodology/approach]. The study aims to [research objectives].</p>
+                    </div>
+                    <div class="research-item">
+                        <h3>Research Interests</h3>
+                        <ul>
+                            <li>Research Area 1</li>
+                            <li>Research Area 2</li>
+                            <li>Research Area 3</li>
+                            <li>Research Area 4</li>
+                        </ul>
+                    </div>
+                    <div class="research-item">
+                        <h3>Methodologies</h3>
+                        <p>My research employs both quantitative and qualitative methodologies, including [specific methods]. I have experience with [tools/software] and [analytical techniques].</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="publications" class="section">
+                <h2>Publications</h2>
+                
+                <div class="publication">
+                    <div class="publication-title">Title of Your Recent Paper</div>
+                    <div class="publication-authors">Nivsarkar, A., Co-author, B., & Senior-author, C.</div>
+                    <div class="publication-venue">Journal of Important Research, 2024 (under review)</div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Another Research Paper Title</div>
+                    <div class="publication-authors">Co-author, A., Nivsarkar, A., & Advisor, D.</div>
+                    <div class="publication-venue">Proceedings of Academic Conference, 2024</div>
+                </div>
+
+                <div class="publication">
+                    <div class="publication-title">Conference Presentation Title</div>
+                    <div class="publication-authors">Nivsarkar, A.</div>
+                    <div class="publication-venue">International Conference on Your Field, 2023</div>
+                </div>
+            </section>
+
+            <section id="cv" class="section">
+                <h2>Curriculum Vitae</h2>
+                
+                <div class="cv-section">
+                    <h3>Education</h3>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <span class="cv-title">PhD in [Your Field]</span>
+                            <span class="cv-date">2022 - Present</span>
+                        </div>
+                        <div class="cv-institution">University Name</div>
+                        <div class="cv-description">Dissertation: "Your Dissertation Title"<br>Advisor: Prof. [Name]</div>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <span class="cv-title">Master of [Degree]</span>
+                            <span class="cv-date">2020</span>
+                        </div>
+                        <div class="cv-institution">Previous University</div>
+                        <div class="cv-description">Thesis: "Previous Research Topic"</div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Experience</h3>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <span class="cv-title">Research Assistant</span>
+                            <span class="cv-date">2022 - Present</span>
+                        </div>
+                        <div class="cv-institution">University Research Lab</div>
+                        <div class="cv-description">Conducting research on [topic], data analysis, literature review</div>
+                    </div>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <span class="cv-title">Teaching Assistant</span>
+                            <span class="cv-date">2023</span>
+                        </div>
+                        <div class="cv-institution">University Name</div>
+                        <div class="cv-description">TA for Course Name: grading, leading discussion sections</div>
+                    </div>
+                </div>
+
+                <div class="cv-section">
+                    <h3>Awards & Honors</h3>
+                    <div class="cv-item">
+                        <div class="cv-item-header">
+                            <span class="cv-title">Graduate Fellowship</span>
+                            <span class="cv-date">2022</span>
+                        </div>
+                        <div class="cv-institution">University Name</div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Anima Nivsarkar. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
