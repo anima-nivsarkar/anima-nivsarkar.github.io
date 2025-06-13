@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anima Nivsarkar | PhD Candidate</title>
+    <title>Anima Nivsarkar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,444 +14,239 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --ut-orange: #bf5700;
-            --ut-orange-light: #d16408;
-            --ut-orange-dark: #a04d00;
-            --charcoal: #2c3e50;
-            --charcoal-light: #34495e;
-            --gray-50: #f8fafc;
-            --gray-100: #f1f5f9;
-            --gray-200: #e2e8f0;
-            --gray-300: #cbd5e1;
-            --gray-600: #475569;
-            --gray-700: #334155;
-            --gray-800: #1e293b;
-            --white: #ffffff;
-        }
-
         body {
-            font-family: 'Crimson Text', serif;
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
-            color: var(--gray-800);
-            background-color: var(--gray-50);
+            color: #000000;
+            background-color: #ffffff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 3rem;
         }
 
         /* Header */
         header {
-            background: var(--white);
-            border-bottom: 1px solid var(--gray-200);
-            padding: 2rem 0;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            background: #ffffff;
+            padding: 3rem 0 2rem;
         }
 
         .header-content {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            gap: 3rem;
+            display: flex;
+            justify-content: space-between;
             align-items: center;
         }
 
         .name-section h1 {
-            font-family: 'Inter', sans-serif;
-            font-size: 3rem;
-            font-weight: 600;
-            color: var(--charcoal);
-            margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
-        }
-
-        .title {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 400;
-            color: var(--gray-600);
-            margin-bottom: 0.75rem;
-        }
-
-        .university {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
             font-weight: 500;
-            color: var(--ut-orange);
-            margin-bottom: 1rem;
+            color: #000000;
+            letter-spacing: -0.01em;
         }
 
-        .contact-quick {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            color: var(--gray-600);
+        .navigation {
+            display: flex;
+            gap: 3rem;
         }
 
-        .contact-quick a {
-            color: var(--ut-orange);
+        .navigation a {
+            color: #000000;
             text-decoration: none;
-            transition: color 0.2s ease;
-        }
-
-        .contact-quick a:hover {
-            color: var(--ut-orange-dark);
-        }
-
-        .logo-section {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 140px;
-            height: 140px;
-            background: var(--gray-50);
-            border: 2px solid var(--gray-200);
-            border-radius: 12px;
-            font-family: 'Inter', sans-serif;
-            font-size: 0.85rem;
-            color: var(--gray-600);
-            text-align: center;
-            padding: 1rem;
-        }
-
-        /* Navigation */
-        nav {
-            background: var(--ut-orange);
-            padding: 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            margin: 0;
-        }
-
-        nav ul li a {
-            display: block;
-            padding: 1.25rem 2.5rem;
-            color: var(--white);
-            text-decoration: none;
-            font-family: 'Inter', sans-serif;
             font-size: 1rem;
-            font-weight: 500;
-            letter-spacing: 0.02em;
-            transition: all 0.2s ease;
-            border-bottom: 3px solid transparent;
+            font-weight: 400;
+            transition: color 0.2s ease;
+            position: relative;
         }
 
-        nav ul li a:hover,
-        nav ul li a.active {
-            background-color: var(--ut-orange-dark);
-            border-bottom-color: var(--white);
+        .navigation a:hover,
+        .navigation a.active {
+            color: #bf5700;
+        }
+
+        .navigation a.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: #bf5700;
         }
 
         /* Main Content */
         main {
-            padding: 4rem 0;
+            flex: 1;
+            padding: 3rem 0 4rem;
         }
 
-        .section {
-            margin-bottom: 5rem;
-            background: var(--white);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            border: 1px solid var(--gray-200);
-        }
-
-        .section-header {
-            background: linear-gradient(135deg, var(--charcoal) 0%, var(--charcoal-light) 100%);
-            padding: 2rem 3rem;
-            color: var(--white);
-        }
-
-        .section-header h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: 2.25rem;
-            font-weight: 600;
-            letter-spacing: -0.02em;
-            margin: 0;
-        }
-
-        .section-content {
-            padding: 3rem;
-        }
-
-        /* About Section */
-        .about-layout {
+        .content-layout {
             display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 3rem;
+            grid-template-columns: 400px 1fr;
+            gap: 4rem;
             align-items: start;
         }
 
         .profile-photo {
-            width: 280px;
-            height: 350px;
-            border-radius: 12px;
-            border: 4px solid var(--gray-200);
+            width: 400px;
+            height: 500px;
+            border-radius: 8px;
             object-fit: cover;
-            background: var(--gray-100);
+            background: #f8f9fa;
             display: flex;
             align-items: center;
             justify-content: center;
-            color: var(--gray-600);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
+            color: #666666;
+            font-size: 1rem;
             text-align: center;
             padding: 2rem;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
 
-        .intro {
-            font-size: 1.2rem;
-            line-height: 1.8;
-            color: var(--gray-700);
+        .content-section {
+            padding-top: 1rem;
         }
 
-        .intro p {
+        .intro-text {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #000000;
+            margin-bottom: 2.5rem;
+        }
+
+        .intro-text p {
             margin-bottom: 1.5rem;
         }
 
-        .intro p:last-child {
+        .intro-text p:last-child {
             margin-bottom: 0;
         }
 
-        /* Contact Info Strip */
-        .contact-strip {
-            background: var(--gray-100);
-            padding: 1.5rem 3rem;
-            border-top: 1px solid var(--gray-200);
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            color: var(--gray-600);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
+        .info-section {
+            margin-bottom: 2rem;
         }
 
-        .contact-strip a {
-            color: var(--ut-orange);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-strip a:hover {
-            color: var(--ut-orange-dark);
-        }
-
-        /* Research Grid */
-        .research-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .research-card {
-            background: var(--gray-50);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--gray-200);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-
-        .research-card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-
-        .research-card h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.4rem;
+        .info-section h3 {
+            font-size: 1.1rem;
             font-weight: 600;
-            color: var(--charcoal);
+            color: #000000;
+            margin-bottom: 0.8rem;
+        }
+
+        .info-section p {
+            font-size: 1rem;
+            color: #000000;
+            line-height: 1.6;
             margin-bottom: 1rem;
         }
 
-        .research-card p {
-            color: var(--gray-700);
-            line-height: 1.6;
-        }
-
-        .research-card ul {
-            color: var(--gray-700);
-            padding-left: 1.2rem;
-        }
-
-        .research-card ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        /* Publications */
-        .publication {
-            padding: 2rem 0;
-            border-bottom: 1px solid var(--gray-200);
-        }
-
-        .publication:last-child {
-            border-bottom: none;
-        }
-
-        .publication-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: var(--charcoal);
-            margin-bottom: 0.75rem;
-            line-height: 1.4;
-        }
-
-        .publication-authors {
-            font-size: 1.1rem;
-            font-style: italic;
-            color: var(--gray-600);
-            margin-bottom: 0.5rem;
-        }
-
-        .publication-venue {
-            font-family: 'Inter', sans-serif;
+        .contact-info {
             font-size: 1rem;
-            color: var(--ut-orange);
-            font-weight: 500;
-        }
-
-        /* CV Sections */
-        .cv-section {
-            margin-bottom: 3rem;
-        }
-
-        .cv-section h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.6rem;
-            font-weight: 600;
-            color: var(--charcoal);
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 2px solid var(--gray-200);
-        }
-
-        .cv-item {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: var(--gray-50);
-            border-radius: 8px;
-            border-left: 4px solid var(--ut-orange);
-        }
-
-        .cv-item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 0.75rem;
-        }
-
-        .cv-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: var(--charcoal);
-        }
-
-        .cv-date {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
-            color: var(--ut-orange);
-            font-weight: 500;
-        }
-
-        .cv-institution {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.1rem;
-            color: var(--gray-600);
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-
-        .cv-description {
-            color: var(--gray-700);
+            color: #000000;
             line-height: 1.6;
+        }
+
+        .contact-info p {
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-info a {
+            color: #bf5700;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
         }
 
         /* Footer */
         footer {
-            background: var(--charcoal);
-            color: var(--white);
-            text-align: center;
-            padding: 3rem 0;
-            margin-top: 4rem;
-            font-family: 'Inter', sans-serif;
+            background: #bf5700;
+            color: #ffffff;
+            padding: 2rem 0;
+            margin-top: auto;
         }
 
-        /* Responsive Design */
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-left {
+            font-size: 0.95rem;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .footer-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: opacity 0.2s ease;
+        }
+
+        .footer-links a:hover {
+            opacity: 0.8;
+        }
+
+        /* Responsive */
         @media (max-width: 1024px) {
-            .header-content {
-                grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
+            .container {
+                padding: 0 2rem;
             }
 
-            .about-layout {
+            .content-layout {
                 grid-template-columns: 1fr;
-                text-align: center;
-                gap: 2rem;
+                gap: 3rem;
             }
 
             .profile-photo {
                 justify-self: center;
-                width: 240px;
-                height: 300px;
+                width: 350px;
+                height: 440px;
             }
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 0 1rem;
+                padding: 0 1.5rem;
+            }
+
+            .header-content {
+                flex-direction: column;
+                gap: 2rem;
+                text-align: center;
             }
 
             .name-section h1 {
-                font-size: 2.25rem;
+                font-size: 2rem;
             }
 
-            .section-content {
-                padding: 2rem;
+            .navigation {
+                gap: 2rem;
             }
 
-            .section-header {
-                padding: 1.5rem 2rem;
+            .profile-photo {
+                width: 300px;
+                height: 380px;
             }
 
-            .section-header h2 {
-                font-size: 1.75rem;
+            .intro-text {
+                font-size: 1rem;
             }
 
-            nav ul {
+            .footer-content {
                 flex-direction: column;
-            }
-
-            nav ul li a {
-                padding: 1rem 2rem;
+                gap: 1rem;
                 text-align: center;
-            }
-
-            .contact-strip {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .cv-item-header {
-                flex-direction: column;
-                align-items: flex-start;
             }
         }
     </style>
@@ -462,178 +257,59 @@
             <div class="header-content">
                 <div class="name-section">
                     <h1>Anima Nivsarkar</h1>
-                    <p class="title">PhD Candidate</p>
-                    <p class="university">The University of Texas at Austin</p>
-                    <div class="contact-quick">
-                        <p>Email: <a href="mailto:anima@utexas.edu">anima@utexas.edu</a></p>
-                    </div>
                 </div>
-                <div class="logo-section">
-                    UT Logo Here
-                    <br><small>(Add UT logo)</small>
-                </div>
+                <nav class="navigation">
+                    <a href="#" class="active">Home</a>
+                    <a href="#">Research</a>
+                    <a href="#">Teaching</a>
+                    <a href="#">Contact</a>
+                </nav>
             </div>
         </div>
     </header>
 
-    <nav>
-        <div class="nav-container">
-            <ul>
-                <li><a href="#about" class="active">About</a></li>
-                <li><a href="#research">Research</a></li>
-                <li><a href="#publications">Publications</a></li>
-                <li><a href="#cv">CV</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <main>
         <div class="container">
-            <section id="about" class="section">
-                <div class="section-header">
-                    <h2>About</h2>
+            <div class="content-layout">
+                <div class="profile-photo">
+                    Your Photo Here
+                    <br><small>(Upload your professional headshot)</small>
                 </div>
-                <div class="section-content">
-                    <div class="about-layout">
-                        <div class="profile-photo">
-                            Your Photo Here
-                            <br><small>(Upload your professional headshot)</small>
-                        </div>
-                        <div class="intro">
-                            <p>Welcome to my academic website. I am a PhD candidate in <strong>[Your Field]</strong> at The University of Texas at Austin, working under the supervision of <strong>[Advisor Name]</strong>. My research focuses on <strong>[brief description of your research area]</strong>.</p>
-                            
-                            <p>Prior to beginning my doctoral studies, I completed my [previous degree] in [field] from [institution]. My academic interests span [research interests], with particular emphasis on [specific focus areas].</p>
-                            
-                            <p>I am passionate about [what drives your research] and committed to advancing our understanding of [your field]. My work has implications for [broader impact of your research].</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-strip">
-                    <div>Office: Gates Dell Complex, Room XXX</div>
-                    <div>
-                        <a href="https://orcid.org/">ORCID</a> • 
-                        <a href="https://scholar.google.com/">Google Scholar</a> • 
-                        <a href="#cv">Download CV</a>
-                    </div>
-                </div>
-            </section>
-
-            <section id="research" class="section">
-                <div class="section-header">
-                    <h2>Research</h2>
-                </div>
-                <div class="section-content">
-                    <div class="research-grid">
-                        <div class="research-card">
-                            <h3>Current Research</h3>
-                            <p>My dissertation research investigates [dissertation topic]. This work addresses [problem statement] through [methodology/approach]. The study aims to [research objectives].</p>
-                        </div>
-                        <div class="research-card">
-                            <h3>Research Interests</h3>
-                            <ul>
-                                <li>Research Area 1</li>
-                                <li>Research Area 2</li>
-                                <li>Research Area 3</li>
-                                <li>Research Area 4</li>
-                            </ul>
-                        </div>
-                        <div class="research-card">
-                            <h3>Methodologies</h3>
-                            <p>My research employs both quantitative and qualitative methodologies, including [specific methods]. I have experience with [tools/software] and [analytical techniques].</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="publications" class="section">
-                <div class="section-header">
-                    <h2>Publications</h2>
-                </div>
-                <div class="section-content">
-                    <div class="publication">
-                        <div class="publication-title">Title of Your Recent Paper</div>
-                        <div class="publication-authors">Nivsarkar, A., Co-author, B., & Senior-author, C.</div>
-                        <div class="publication-venue">Journal of Important Research, 2024 (under review)</div>
+                
+                <div class="content-section">
+                    <div class="intro-text">
+                        <p>I am Anima Nivsarkar, a PhD candidate in the [Your Department] at the University of Texas at Austin.</p>
+                        
+                        <p>My research leverages [methodology] to investigate [research focus]. Specifically, I examine [specific research area] and its implications for [broader impact]. My dissertation focuses on [dissertation topic], which [significance].</p>
+                        
+                        <p>I have received [awards/recognition] for my dissertation work, and [other achievements]. I hold a [previous degree] in [field] from [institution].</p>
                     </div>
 
-                    <div class="publication">
-                        <div class="publication-title">Another Research Paper Title</div>
-                        <div class="publication-authors">Co-author, A., Nivsarkar, A., & Advisor, D.</div>
-                        <div class="publication-venue">Proceedings of Academic Conference, 2024</div>
+                    <div class="info-section">
+                        <h3>Research Interests:</h3>
+                        <p>Research Area 1, Research Area 2, Research Area 3, Research Area 4</p>
                     </div>
 
-                    <div class="publication">
-                        <div class="publication-title">Conference Presentation Title</div>
-                        <div class="publication-authors">Nivsarkar, A.</div>
-                        <div class="publication-venue">International Conference on Your Field, 2023</div>
+                    <div class="contact-info">
+                        <p>Email: <a href="mailto:anima@utexas.edu">anima@utexas.edu</a></p>
+                        <p><a href="#" target="_blank">Curriculum Vitae</a></p>
                     </div>
                 </div>
-            </section>
-
-            <section id="cv" class="section">
-                <div class="section-header">
-                    <h2>Curriculum Vitae</h2>
-                </div>
-                <div class="section-content">
-                    <div class="cv-section">
-                        <h3>Education</h3>
-                        <div class="cv-item">
-                            <div class="cv-item-header">
-                                <span class="cv-title">PhD in [Your Field]</span>
-                                <span class="cv-date">2022 - Present</span>
-                            </div>
-                            <div class="cv-institution">The University of Texas at Austin</div>
-                            <div class="cv-description">Dissertation: "Your Dissertation Title"<br>Advisor: Prof. [Name]</div>
-                        </div>
-                        <div class="cv-item">
-                            <div class="cv-item-header">
-                                <span class="cv-title">Master of [Degree]</span>
-                                <span class="cv-date">2020</span>
-                            </div>
-                            <div class="cv-institution">Previous University</div>
-                            <div class="cv-description">Thesis: "Previous Research Topic"</div>
-                        </div>
-                    </div>
-
-                    <div class="cv-section">
-                        <h3>Experience</h3>
-                        <div class="cv-item">
-                            <div class="cv-item-header">
-                                <span class="cv-title">Graduate Research Assistant</span>
-                                <span class="cv-date">2022 - Present</span>
-                            </div>
-                            <div class="cv-institution">The University of Texas at Austin</div>
-                            <div class="cv-description">Conducting research on [topic], data analysis, literature review</div>
-                        </div>
-                        <div class="cv-item">
-                            <div class="cv-item-header">
-                                <span class="cv-title">Teaching Assistant</span>
-                                <span class="cv-date">2023</span>
-                            </div>
-                            <div class="cv-institution">The University of Texas at Austin</div>
-                            <div class="cv-description">TA for Course Name: grading, leading discussion sections</div>
-                        </div>
-                    </div>
-
-                    <div class="cv-section">
-                        <h3>Awards & Honors</h3>
-                        <div class="cv-item">
-                            <div class="cv-item-header">
-                                <span class="cv-title">Graduate Fellowship</span>
-                                <span class="cv-date">2022</span>
-                            </div>
-                            <div class="cv-institution">The University of Texas at Austin</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            </div>
         </div>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Anima Nivsarkar • The University of Texas at Austin</p>
+            <div class="footer-content">
+                <div class="footer-left">
+                    Contact: <a href="mailto:anima@utexas.edu">anima@utexas.edu</a>
+                </div>
+                <div class="footer-links">
+                    <a href="https://orcid.org/" target="_blank">ORCID</a>
+                    <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+                </div>
+            </div>
         </div>
     </footer>
 </body>
