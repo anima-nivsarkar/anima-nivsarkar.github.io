@@ -53,12 +53,43 @@
             font-size: 1.2rem;
             color: #7f8c8d;
             font-style: italic;
+            margin-bottom: 0.3rem;
+        }
+
+        .email {
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .email a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        .email a:hover {
+            text-decoration: underline;
+        }
+
+        .ut-logo {
+            width: 120px;
+            height: auto;
+            background: #f8f9fa;
+            border: 2px solid #bf5700;
+            border-radius: 8px;
+            padding: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #bf5700;
+            font-size: 0.8rem;
+            text-align: center;
         }
 
         .contact-info {
             text-align: right;
             font-size: 0.95rem;
             color: #555;
+            margin-top: 1rem;
         }
 
         .contact-info a {
@@ -71,7 +102,7 @@
         }
 
         nav {
-            background: #34495e;
+            background: #bf5700;
             padding: 1rem 0;
         }
 
@@ -87,7 +118,7 @@
         }
 
         nav ul li a {
-            color: #ecf0f1;
+            color: #fff;
             text-decoration: none;
             font-size: 1.1rem;
             font-weight: 300;
@@ -98,7 +129,7 @@
 
         nav ul li a:hover,
         nav ul li a.active {
-            border-bottom-color: #3498db;
+            border-bottom-color: #fff;
         }
 
         main {
@@ -119,6 +150,29 @@
             margin-bottom: 1.5rem;
             border-bottom: 2px solid #ecf0f1;
             padding-bottom: 0.5rem;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 200px 1fr;
+            gap: 2rem;
+            align-items: start;
+        }
+
+        .profile-photo {
+            width: 180px;
+            height: 220px;
+            border-radius: 8px;
+            border: 3px solid #ddd;
+            object-fit: cover;
+            background: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #666;
+            font-size: 0.9rem;
+            text-align: center;
+            padding: 1rem;
         }
 
         .intro {
@@ -229,6 +283,10 @@
                 text-align: center;
             }
 
+            .ut-logo {
+                margin-top: 1rem;
+            }
+
             .contact-info {
                 text-align: center;
                 margin-top: 1rem;
@@ -246,6 +304,16 @@
                 padding: 1.5rem;
             }
 
+            .about-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .profile-photo {
+                justify-self: center;
+                margin-bottom: 1rem;
+            }
+
             .cv-item-header {
                 flex-direction: column;
                 align-items: flex-start;
@@ -260,16 +328,14 @@
                 <div class="name-title">
                     <h1>Anima Nivsarkar</h1>
                     <p class="title">PhD Candidate</p>
+                    <p class="email">Email: <a href="mailto:anima@utexas.edu">anima@utexas.edu</a></p>
                 </div>
-                <div class="contact-info">
-                    <p>Email: <a href="mailto:anima@university.edu">anima@university.edu</a></p>
-                    <p>Office: Research Building 123</p>
-                    <p><a href="https://orcid.org/">ORCID</a> | <a href="https://scholar.google.com/">Google Scholar</a></p>
+                <div class="ut-logo">
+                    UT Logo Here
+                    <br><small>(Add UT logo)</small>
                 </div>
             </div>
-        </div>
-    </header>
-
+            
     <nav>
         <div class="container">
             <ul>
@@ -286,12 +352,18 @@
         <div class="container">
             <section id="about" class="section">
                 <h2>About</h2>
-                <div class="intro">
-                    <p>Welcome to my academic website. I am a PhD candidate in [Your Field] at [University Name], working under the supervision of [Advisor Name]. My research focuses on [brief description of your research area].</p>
-                    
-                    <p>Prior to beginning my doctoral studies, I completed my [previous degree] in [field] from [institution]. My academic interests span [research interests], with particular emphasis on [specific focus areas].</p>
-                    
-                    <p>I am passionate about [what drives your research] and committed to advancing our understanding of [your field]. My work has implications for [broader impact of your research].</p>
+                <div class="about-content">
+                    <div class="profile-photo">
+                        Your Photo Here
+                        <br><small>(Upload your headshot)</small>
+                    </div>
+                    <div class="intro">
+                        <p>Welcome to my academic website. I am a PhD candidate in [Your Field] at The University of Texas at Austin, working under the supervision of [Advisor Name]. My research focuses on [brief description of your research area].</p>
+                        
+                        <p>Prior to beginning my doctoral studies, I completed my [previous degree] in [field] from [institution]. My academic interests span [research interests], with particular emphasis on [specific focus areas].</p>
+                        
+                        <p>I am passionate about [what drives your research] and committed to advancing our understanding of [your field]. My work has implications for [broader impact of your research].</p>
+                    </div>
                 </div>
             </section>
 
@@ -350,7 +422,7 @@
                             <span class="cv-title">PhD in [Your Field]</span>
                             <span class="cv-date">2022 - Present</span>
                         </div>
-                        <div class="cv-institution">University Name</div>
+                        <div class="cv-institution">The University of Texas at Austin</div>
                         <div class="cv-description">Dissertation: "Your Dissertation Title"<br>Advisor: Prof. [Name]</div>
                     </div>
                     <div class="cv-item">
