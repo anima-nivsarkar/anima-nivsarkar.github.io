@@ -15,10 +15,9 @@
             box-sizing: border-box;
         }
 
-        html, body {
+        html {
             height: 100%;
-            overflow: hidden; /* Prevent all scrolling */
-            width: 100%;
+            overflow: hidden;
         }
 
         body {
@@ -26,8 +25,10 @@
             line-height: 1.6;
             color: #000000;
             background-color: #ffffff;
+            height: 100%;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
 
         .container {
@@ -37,10 +38,10 @@
             width: 100%;
         }
 
-        /* Header - Reduced padding */
+        /* Header */
         header {
             background: #ffffff;
-            padding: 1.5rem 0 1rem;
+            padding: 2.5rem 0 1.5rem;
             width: 100%;
         }
 
@@ -49,14 +50,14 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 2px solid #bf5700;
-            padding-bottom: 0.75rem;
-            margin-bottom: 1rem;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
             width: 100%;
         }
 
         .name-section h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(1.75rem, 4vw, 2.5rem);
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 400;
             color: #000000;
             letter-spacing: 0.01em;
@@ -72,7 +73,7 @@
         .navigation a {
             color: #000000;
             text-decoration: none;
-            font-size: 0.95rem;
+            font-size: 1rem;
             font-weight: 400;
             transition: color 0.2s ease;
             position: relative;
@@ -94,26 +95,26 @@
             background-color: #bf5700;
         }
 
-        /* Main Content - Reduced padding */
+        /* Main Content */
         main {
             flex: 1;
-            padding: 1.5rem 0;
+            padding: 2rem 0 3rem;
             width: 100%;
-            overflow-y: auto; /* Allow scrolling only in main content if needed */
+            overflow-y: auto;
         }
 
         .content-layout {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 2rem;
+            gap: 3rem;
             align-items: start;
             width: 100%;
         }
 
         .profile-photo {
             width: 100%;
-            max-width: 300px;
-            height: 380px;
+            max-width: 400px;
+            height: 500px;
             border-radius: 8px;
             object-fit: cover;
             background: #f8f9fa;
@@ -121,20 +122,20 @@
         }
 
         .content-section {
-            padding-top: 0.5rem;
+            padding-top: 1rem;
             width: 100%;
         }
 
         .intro-text {
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 1.1rem;
+            line-height: 1.7;
             color: #000000;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2.5rem;
             word-wrap: break-word;
         }
 
         .intro-text p {
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
         }
 
         .intro-text p:last-child {
@@ -142,32 +143,32 @@
         }
 
         .info-section {
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .info-section h3 {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: #000000;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
         }
 
         .info-section p {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #000000;
-            line-height: 1.5;
-            margin-bottom: 0.75rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
             word-wrap: break-word;
         }
 
         .contact-info {
-            font-size: 0.95rem;
+            font-size: 1rem;
             color: #000000;
-            line-height: 1.5;
+            line-height: 1.6;
         }
 
         .contact-info p {
-            margin-bottom: 0.25rem;
+            margin-bottom: 0.3rem;
         }
 
         .contact-info a {
@@ -180,11 +181,11 @@
             text-decoration: underline;
         }
 
-        /* Footer - Reduced padding */
+        /* Footer */
         footer {
             background: #bf5700;
             color: #ffffff;
-            padding: 1rem 0;
+            padding: 1.5rem 0;
             width: 100%;
         }
 
@@ -193,23 +194,23 @@
             justify-content: space-between;
             align-items: center;
             flex-wrap: wrap;
-            gap: 0.75rem;
+            gap: 1rem;
         }
 
         .footer-left {
-            font-size: 1rem;
+            font-size: 1.1rem;
         }
 
         .footer-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             flex-wrap: wrap;
         }
 
         .footer-links a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1rem;
+            font-size: 1.1rem;
             transition: opacity 0.2s ease;
             white-space: nowrap;
         }
@@ -225,14 +226,12 @@
             }
             
             .content-layout {
-                grid-template-columns: 300px 1fr;
-                gap: 3rem;
+                grid-template-columns: 400px 1fr;
+                gap: 4rem;
             }
             
             .profile-photo {
                 justify-self: start;
-                max-width: 280px;
-                height: 350px;
             }
         }
 
@@ -241,56 +240,33 @@
                 padding: 0 1rem;
             }
 
-            header {
-                padding: 1rem 0 0.75rem;
-            }
-
             .header-content {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
                 text-align: center;
-                padding-bottom: 0.5rem;
             }
 
             .name-section h1 {
-                font-size: 1.75rem;
+                font-size: 2rem;
             }
 
             .navigation {
-                gap: 1rem;
+                gap: 1.5rem;
                 justify-content: center;
             }
 
-            .navigation a {
-                font-size: 0.9rem;
-            }
-
             .profile-photo {
-                max-width: 250px;
-                height: 320px;
+                max-width: 300px;
+                height: 380px;
             }
 
             .intro-text {
-                font-size: 0.95rem;
-            }
-
-            main {
-                padding: 1rem 0;
-            }
-
-            footer {
-                padding: 0.75rem 0;
+                font-size: 1rem;
             }
 
             .footer-content {
                 flex-direction: column;
                 text-align: center;
-                gap: 0.5rem;
-            }
-
-            .footer-left,
-            .footer-links a {
-                font-size: 0.9rem;
             }
         }
 
@@ -300,39 +276,26 @@
             }
             
             .navigation {
-                gap: 0.75rem;
+                gap: 1rem;
             }
             
             .footer-links {
                 gap: 1rem;
             }
         }
-
-        /* For very short screens */
-        @media (max-height: 700px) {
+        
+        /* Adjust spacing for screens with limited height */
+        @media (max-height: 800px) {
             header {
-                padding: 0.75rem 0 0.5rem;
+                padding: 2rem 0 1rem;
             }
             
             main {
-                padding: 0.75rem 0;
+                padding: 1.5rem 0 2rem;
             }
             
             footer {
-                padding: 0.5rem 0;
-            }
-            
-            .profile-photo {
-                height: 280px;
-            }
-            
-            .intro-text {
-                font-size: 0.9rem;
-                line-height: 1.4;
-            }
-            
-            .intro-text p {
-                margin-bottom: 0.75rem;
+                padding: 1.25rem 0;
             }
         }
     </style>
