@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anima Nivsarkar</title>
+    <title>Teaching - Anima Nivsarkar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -103,82 +104,11 @@
             overflow-y: auto;
         }
 
-        .content-layout {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 3rem;
-            align-items: start;
-            width: 100%;
-        }
-
-        .profile-photo {
-            width: 100%;
-            max-width: 400px;
-            height: 500px;
-            border-radius: 8px;
-            object-fit: cover;
-            background: #f8f9fa;
-            justify-self: center;
-        }
-
-        .content-section {
+        .teaching-content {
+            font-size: 1.3rem;
+            color: #000000;
             padding-top: 1rem;
-            width: 100%;
-        }
-
-        .intro-text {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #000000;
-            margin-bottom: 2.5rem;
-            word-wrap: break-word;
-        }
-
-        .intro-text p {
-            margin-bottom: 1.5rem;
-        }
-
-        .intro-text p:last-child {
-            margin-bottom: 0;
-        }
-
-        .info-section {
-            margin-bottom: 2rem;
-        }
-
-        .info-section h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 0.8rem;
-        }
-
-        .info-section p {
-            font-size: 1rem;
-            color: #000000;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-            word-wrap: break-word;
-        }
-
-        .contact-info {
-            font-size: 1rem;
-            color: #000000;
-            line-height: 1.6;
-        }
-
-        .contact-info p {
-            margin-bottom: 0.3rem;
-        }
-
-        .contact-info a {
-            color: #bf5700;
-            text-decoration: none;
-            word-break: break-all;
-        }
-
-        .contact-info a:hover {
-            text-decoration: underline;
+            text-align: center;
         }
 
         /* Footer */
@@ -213,6 +143,8 @@
             font-size: 1.1rem;
             transition: opacity 0.2s ease;
             white-space: nowrap;
+            display: inline-flex;
+            align-items: center;
         }
 
         .footer-links a:hover {
@@ -220,21 +152,6 @@
         }
 
         /* Responsive */
-        @media (min-width: 1025px) {
-            .container {
-                padding: 0 3rem;
-            }
-            
-            .content-layout {
-                grid-template-columns: 400px 1fr;
-                gap: 4rem;
-            }
-            
-            .profile-photo {
-                justify-self: start;
-            }
-        }
-
         @media (max-width: 768px) {
             .container {
                 padding: 0 1rem;
@@ -255,13 +172,8 @@
                 justify-content: center;
             }
 
-            .profile-photo {
-                max-width: 300px;
-                height: 380px;
-            }
-
-            .intro-text {
-                font-size: 1rem;
+            .teaching-content {
+                font-size: 1.1rem;
             }
 
             .footer-content {
@@ -308,9 +220,9 @@
                     <h1>Anima Nivsarkar</h1>
                 </div>
                 <nav class="navigation">
-                <a href="https://anima-nivsarkar.github.io/" class="active">Home</a>
+                <a href="https://anima-nivsarkar.github.io/">Home</a>
                 <a href="./research.html">Research</a>
-                <a href="./teaching.html">Teaching</a>
+                <a href="./teaching.html" class="active">Teaching</a>
                 <a href="./contact.html">Contact</a>
                 </nav>
             </div>
@@ -319,26 +231,8 @@
 
     <main>
         <div class="container">
-            <div class="content-layout">
-                <img src="Anima_photo.jpg" alt="Anima Nivsarkar" class="profile-photo">
-                
-                <div class="content-section">
-                    <div class="intro-text">
-                <p>I am Anima Nivsarkar, a PhD candidate in the Marketing Department (Quantitative Marketing Strategy) at the University of Texas at Austin.</p>
-    
-                    <p>My research leverages Causal Inference, Machine Learning, and Field Experiments to investigate how external shocks such as natural disasters, policy changes, and technological disruptions affect firm marketing outcomes and consumer behavior. I focus particularly on healthcare and social impact contexts, examining how marketing strategies can drive positive social outcomes while helping organizations navigate unexpected challenges.</p>
-    
-                <p>I hold a Master's degree in Business Administration from the Indian Institute of Foreign Trade, and an undergraduate degree in Civil Engineering.</p>
-                </div>
-
-                    <div class="info-section">
-                    </div>
-
-                    <div class="contact-info">
-                        <p>Email: <a href="mailto:anima.nivsarkar@utexas.edu">anima.nivsarkar@utexas.edu</a></p>
-                       <p><a href="./Anima_Nivsarkar_Feb_2025.pdf" target="_blank">Curriculum Vitae</a></p>
-                    </div>
-                </div>
+            <div class="teaching-content">
+                <p>Scheduled to teach Principles of Marketing</p>
             </div>
         </div>
     </main>
@@ -350,7 +244,7 @@
                     Contact: <a href="mailto:anima.nivsarkar@utexas.edu">anima.nivsarkar@utexas.edu</a>
                 </div>
                 <div class="footer-links">
-                    <a href="https://orcid.org/" target="_blank">ORCID</a>
+                    <a href="https://www.linkedin.com/in/anima-nivsarkar" target="_blank"><i class="fab fa-linkedin" style="font-size: 1.3rem;"></i></a>
                     <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
                 </div>
             </div>
