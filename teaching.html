@@ -121,38 +121,24 @@
 
         .footer-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-        }
-
-        .footer-left {
-            font-size: 1.1rem;
         }
 
         .footer-links {
             display: flex;
-            gap: 2rem;
-            flex-wrap: wrap;
+            gap: 3rem;
         }
 
         .footer-links a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 1.1rem;
-            transition: opacity 0.2s ease;
-            white-space: nowrap;
-            display: inline-flex;
-            align-items: center;
+            font-size: 1.6rem;
+            transition: opacity 0.3s ease;
         }
 
         .footer-links a:hover {
             opacity: 0.8;
-        }
-        
-        .footer-links a:hover i {
-            color: #005885 !important; /* Darker blue on hover */
         }
 
         /* Responsive */
@@ -180,9 +166,8 @@
                 font-size: 1.1rem;
             }
 
-            .footer-content {
-                flex-direction: column;
-                text-align: center;
+            .footer-links {
+                gap: 2rem;
             }
         }
 
@@ -196,7 +181,7 @@
             }
             
             .footer-links {
-                gap: 1rem;
+                gap: 1.5rem;
             }
         }
         
@@ -244,12 +229,10 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-left">
-                    Contact: <a href="mailto:anima.nivsarkar@utexas.edu">anima.nivsarkar@utexas.edu</a>
-                </div>
                 <div class="footer-links">
-                    <a href="https://www.linkedin.com/in/anima-nivsarkar" target="_blank"><i class="fab fa-linkedin" style="font-size: 1.3rem; color: #0077B5;"></i></a>
-                    <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+                    <a href="mailto:anima.nivsarkar@utexas.edu"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/anima-nivsarkar" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/anima-nivsarkar" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
         </div>
