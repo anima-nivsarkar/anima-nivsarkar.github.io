@@ -6,7 +6,9 @@
     <title>Research - Anima Nivsarkar</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -14,45 +16,59 @@
             box-sizing: border-box;
         }
 
+        html {
+            height: 100%;
+            overflow: hidden;
+        }
+
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
             line-height: 1.6;
             color: #000000;
             background-color: #ffffff;
-            min-height: 100vh;
+            height: 100%;
             display: flex;
             flex-direction: column;
+            overflow: hidden;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 3rem;
+            padding: 0 2rem;
+            width: 100%;
         }
 
         /* Header */
         header {
             background: #ffffff;
-            padding: 3rem 0 2rem;
+            padding: 2.5rem 0 1.5rem;
+            width: 100%;
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            border-bottom: 2px solid #bf5700;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+            width: 100%;
         }
 
         .name-section h1 {
             font-family: 'Cormorant Garamond', serif;
-            font-size: 3rem;
+            font-size: clamp(2rem, 5vw, 3rem);
             font-weight: 400;
             color: #000000;
             letter-spacing: 0.01em;
+            white-space: nowrap;
         }
 
         .navigation {
             display: flex;
-            gap: 3rem;
+            gap: clamp(1rem, 3vw, 3rem);
+            flex-wrap: wrap;
         }
 
         .navigation a {
@@ -62,6 +78,7 @@
             font-weight: 400;
             transition: color 0.2s ease;
             position: relative;
+            white-space: nowrap;
         }
 
         .navigation a:hover,
@@ -82,82 +99,34 @@
         /* Main Content */
         main {
             flex: 1;
-            padding: 3rem 0 4rem;
+            padding: 2rem 0 3rem;
+            width: 100%;
+            overflow-y: auto;
         }
 
         .research-content {
             max-width: 900px;
             margin: 0 auto;
+            padding-top: 1rem;
         }
 
-        .page-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: 2.5rem;
-            font-weight: 400;
-            color: #000000;
+        .section {
             margin-bottom: 3rem;
-            text-align: center;
         }
 
-        .research-section {
-            margin-bottom: 3.5rem;
-        }
-
-        .research-section h2 {
-            font-size: 1.4rem;
+        .section h2 {
+            font-size: 1.5rem;
             font-weight: 600;
             color: #000000;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
             padding-bottom: 0.5rem;
-        }
-
-        .research-overview {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            color: #000000;
-            margin-bottom: 2rem;
-        }
-
-        .research-overview p {
-            margin-bottom: 1.5rem;
-        }
-
-        .research-areas {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 2.5rem;
-            margin-bottom: 3rem;
-        }
-
-        .research-area {
-            padding: 2rem;
-            background: #fafafa;
-            border-radius: 8px;
-            border-left: 4px solid #bf5700;
-        }
-
-        .research-area h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 1rem;
-        }
-
-        .research-area p {
-            font-size: 1rem;
-            color: #000000;
-            line-height: 1.6;
-        }
-
-        .publications-section h2 {
-            margin-bottom: 2rem;
         }
 
         .publication {
             margin-bottom: 2rem;
             padding-bottom: 2rem;
-            border-bottom: 1px solid #e5e5e5;
+            border-bottom: 1px solid #f0f0f0;
         }
 
         .publication:last-child {
@@ -167,11 +136,20 @@
         }
 
         .publication-title {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 600;
             color: #000000;
             margin-bottom: 0.5rem;
             line-height: 1.4;
+        }
+
+        .publication-title a {
+            color: #000000;
+            text-decoration: none;
+        }
+
+        .publication-title a:hover {
+            color: #bf5700;
         }
 
         .publication-authors {
@@ -187,62 +165,38 @@
             font-weight: 500;
         }
 
-        .current-projects {
-            margin-top: 3rem;
-        }
-
-        .project {
-            margin-bottom: 2.5rem;
-        }
-
-        .project h3 {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #000000;
-            margin-bottom: 1rem;
-        }
-
-        .project p {
-            font-size: 1rem;
-            color: #000000;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .project-meta {
-            font-size: 0.95rem;
+        .coming-soon {
             color: #666666;
             font-style: italic;
+            font-size: 1.1rem;
+            text-align: center;
+            padding: 2rem 0;
         }
 
         /* Footer */
         footer {
             background: #bf5700;
             color: #ffffff;
-            padding: 2rem 0;
-            margin-top: auto;
+            padding: 1.5rem 0;
+            width: 100%;
         }
 
         .footer-content {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
-        }
-
-        .footer-left {
-            font-size: 0.95rem;
         }
 
         .footer-links {
             display: flex;
-            gap: 2rem;
+            gap: 3rem;
         }
 
         .footer-links a {
             color: #ffffff;
             text-decoration: none;
-            font-size: 0.95rem;
-            transition: opacity 0.2s ease;
+            font-size: 1.6rem;
+            transition: opacity 0.3s ease;
         }
 
         .footer-links a:hover {
@@ -250,24 +204,14 @@
         }
 
         /* Responsive */
-        @media (max-width: 1024px) {
-            .container {
-                padding: 0 2rem;
-            }
-
-            .research-areas {
-                grid-template-columns: 1fr;
-            }
-        }
-
         @media (max-width: 768px) {
             .container {
-                padding: 0 1.5rem;
+                padding: 0 1rem;
             }
 
             .header-content {
                 flex-direction: column;
-                gap: 2rem;
+                gap: 1.5rem;
                 text-align: center;
             }
 
@@ -276,17 +220,41 @@
             }
 
             .navigation {
+                gap: 1.5rem;
+                justify-content: center;
+            }
+
+            .footer-links {
                 gap: 2rem;
             }
+        }
 
-            .page-title {
-                font-size: 2rem;
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 0.75rem;
             }
-
-            .footer-content {
-                flex-direction: column;
+            
+            .navigation {
                 gap: 1rem;
-                text-align: center;
+            }
+            
+            .footer-links {
+                gap: 1.5rem;
+            }
+        }
+        
+        /* Adjust spacing for screens with limited height */
+        @media (max-height: 800px) {
+            header {
+                padding: 2rem 0 1rem;
+            }
+            
+            main {
+                padding: 1.5rem 0 2rem;
+            }
+            
+            footer {
+                padding: 1.25rem 0;
             }
         }
     </style>
@@ -299,34 +267,38 @@
                     <h1>Anima Nivsarkar</h1>
                 </div>
                 <nav class="navigation">
-                    <a href="index.html">Home</a>
-                    <a href="#" class="active">Research</a>
-                    <a href="#">Teaching</a>
-                    <a href="#">Contact</a>
+                    <a href="https://anima-nivsarkar.github.io/">Home</a>
+                    <a href="./research.html" class="active">Research</a>
+                    <a href="./teaching.html">Teaching</a>
+                    <a href="./contact.html">Contact</a>
                 </nav>
             </div>
         </div>
     </header>
 
     <main>
-                <div class="research-section publications-section">
+        <div class="container">
+            <div class="research-content">
+                <div class="section">
                     <h2>Publications</h2>
                     
                     <div class="publication">
-                        <div class="publication-title"><a href="https://journals.sagepub.com/doi/10.1177/00222429251355263" target="_blank" style="color: #000000; text-decoration: none;">Fit to Persuade: The Role of Source–Appeal Congruence in Cancer Screening Decisions</a></div>
+                        <div class="publication-title">
+                            <a href="https://journals.sagepub.com/doi/10.1177/00222429251355263" target="_blank">Fit to Persuade: The Role of Source–Appeal Congruence in Cancer Screening Decisions</a>
+                        </div>
                         <div class="publication-authors">Vedha Ponnappan, Anima Nivsarkar, Prakash Satyavageeswaran, and Sundar Bharadwaj</div>
                         <div class="publication-venue">Journal of Marketing Research, 2025</div>
                     </div>
                 </div>
 
-                <div class="research-section">
+                <div class="section">
                     <h2>Working Papers</h2>
-                    <p style="color: #666666; font-style: italic;">Coming soon...</p>
+                    <div class="coming-soon">Coming soon...</div>
                 </div>
 
-                <div class="research-section">
+                <div class="section">
                     <h2>Work in Progress</h2>
-                    <p style="color: #666666; font-style: italic;">Coming soon...</p>
+                    <div class="coming-soon">Coming soon...</div>
                 </div>
             </div>
         </div>
@@ -335,15 +307,13 @@
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="footer-left">
-                    Contact: <a href="mailto:anima.nivsarkar@mccombs.@utexas.edu">anima@utexas.edu</a>
-                </div>
                 <div class="footer-links">
-                    <a href="https://orcid.org/" target="_blank">ORCID</a>
-                    <a href="https://scholar.google.com/" target="_blank">Google Scholar</a>
+                    <a href="mailto:anima.nivsarkar@utexas.edu"><i class="fas fa-envelope"></i></a>
+                    <a href="" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/anima-nivsarkar" target="_blank"><i class="fab fa-linkedin"></i></a>
                 </div>
             </div>
-        </footer>
+        </div>
     </footer>
 </body>
 </html>
